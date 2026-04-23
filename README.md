@@ -1,2 +1,2 @@
-# website-template
-Website template for M244 Projects
+# Website Template
+Template repository for M244 Projects
