@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
     "section": "",
-    "text": "Welcome! This is a template for creating a website using quarto and GitHub pages.\n\n\n\n\n\nArtwork by @allison_horst"
+    "text": "Our research uncovers the time trade-off inherent in individual decision-making. Time is a finite resource, so there’s an associated opportunity cost with each decision to work, sleep, exercise, etc. This begs the question of how do individuals allocate their time in their full 24 hour day? We speculate there must be differences across demographic variables, including sex, age, and marital status.\n\n\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "Introduction & Data.html",
@@ -37,6 +37,27 @@
   {
     "objectID": "Results.html",
     "href": "Results.html",
+    "title": "Introduction & Data",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "resultsdiscussion.html",
+    "href": "resultsdiscussion.html",
+    "title": "Results & Discussion",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "Methodology",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "introductiondata.html",
+    "href": "introductiondata.html",
     "title": "Introduction & Data",
     "section": "",
     "text": "Example of adding another page to a website."
