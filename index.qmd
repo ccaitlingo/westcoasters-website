@@ -3,8 +3,10 @@ title: "MATH 244: Paid vs. Unpaid Labor by Sex"
 authors: "The West Coasters: Caitlin Gong, Meredith Hillier, & Leela Khatri"
 ---
 
+## Introduction
+
 Our research uncovers the time trade-off inherent in individual decision-making. Time is a finite resource, so there's an associated opportunity cost with each decision to work, sleep, exercise, etc. This begs the question of how do individuals allocate their time in their full 24 hour day? We speculate there must be differences across demographic variables, including sex, age, and marital status.
 
-![](hedgehog.png){fig-align="center" width="603"}
+## Research Question
 
-[Artwork by \@allison_horst](https://twitter.com/allison_horst)
+How does time spent doing unpaid domestic work influence wages and time spent doing paid work? Does this relationship differ by sex?

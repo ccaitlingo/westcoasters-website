@@ -8,8 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: introductiondata.qmd  
-        text: "Introduction & Data"
+      - href: datacleaning.qmd  
+        text: "Data & Cleaning"
       - href: methodology.qmd  
         text: "Methodology"
       - href: resultsdiscussion.qmd  
@@ -21,7 +21,7 @@ format:
       - cosmo
       - brand
     css: styles.css
-    toc: true
+    toc: false
 
 
 

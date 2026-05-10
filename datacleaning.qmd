@@ -1,0 +1,54 @@
+---
+title: "Data & Cleaning"
+subtitle: "Spring 2026"
+format: 
+  html:
+    page-layout: full
+    theme: cosmo
+    toc: true
+    toc-title: "Contents"
+    embed-resources: true
+    standalone: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+::::: columns
+::: {.column width="30%"}
+  * IPUMS Time Use, collection of time diary data
+  * American Heritage Time Use Study Extract Builder
+  * From 1930 to 2018, harmonized for comparison over time
+:::
+::: {.column width="70%"}
+```{r codebook, echo=FALSE, warning=FALSE, message=FALSE}
+library(kableExtra)
+
+codebook <- tibble::tribble(
+  ~Variable, ~Description, ~Type,
+  "WAGELM", "Monthly employment income", "Numerical",
+  "SEX", "Individual's sex (female=1, male=0)", "Binary",
+  "YEAR", "Year of the diary entry", "Numerical",
+  "HHID", "Household type (1=married with child)", "Categorical",
+  "UNDER18", "Number of children under 18 in the household", "Numerical",
+  "AGEYNGST", "Age of youngest child", "Numerical",
+  "EDUC", "Education (5=college graduate, 6=post college)", "Categorical",
+  "AGE", "Age of participant", "Numerical",
+  "ACT_PAID", "Daily time spent on paid work", "Numerical",
+  "ACT_UNPAID", "Daily time spent on unpaid domestic work", "Numerical",
+  "ACT_CHCARE", "Daily time spent on child care", "Numerical",
+  "ACT_CIVIC", "Daily time spent on civic, voluntary, and religious activities", "Numerical",
+  "ACT_EDUCA", "Daily time spent on education", "Numerical",
+  "ACT_LEISURE", "Daily time spent on free time (leisure)", "Numerical",
+  "ACT_PCARE", "Daily time spent on personal care", "Numerical",
+  "ACT_TRAVEL", "Daily time spent on travel", "Numerical"
+)
+
+codebook %>%
+  kable(format = "html") %>%
+  kable_styling(font_size = 18, full_width = FALSE, position = "center") %>%
+  column_spec(1, width = "8em") %>%
+  column_spec(2, width = "25em")
+```
+:::
+:::::

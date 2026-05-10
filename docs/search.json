@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
     "section": "",
-    "text": "Our research uncovers the time trade-off inherent in individual decision-making. Time is a finite resource, so there’s an associated opportunity cost with each decision to work, sleep, exercise, etc. This begs the question of how do individuals allocate their time in their full 24 hour day? We speculate there must be differences across demographic variables, including sex, age, and marital status.\n\n\n\n\n\nArtwork by @allison_horst"
+    "text": "Our research uncovers the time trade-off inherent in individual decision-making. Time is a finite resource, so there’s an associated opportunity cost with each decision to work, sleep, exercise, etc. This begs the question of how do individuals allocate their time in their full 24 hour day? We speculate there must be differences across demographic variables, including sex, age, and marital status."
   },
   {
     "objectID": "Introduction & Data.html",
@@ -61,5 +61,26 @@
     "title": "Introduction & Data",
     "section": "",
     "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
+    "section": "",
+    "text": "Our research uncovers the time trade-off inherent in individual decision-making. Time is a finite resource, so there’s an associated opportunity cost with each decision to work, sleep, exercise, etc. This begs the question of how do individuals allocate their time in their full 24 hour day? We speculate there must be differences across demographic variables, including sex, age, and marital status."
+  },
+  {
+    "objectID": "index.html#research-question",
+    "href": "index.html#research-question",
+    "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
+    "section": "Research Question",
+    "text": "Research Question\nHow does time spent doing unpaid domestic work influence wages and time spent doing paid work? Does this relationship differ by sex?"
+  },
+  {
+    "objectID": "datacleaning.html",
+    "href": "datacleaning.html",
+    "title": "Data & Cleaning",
+    "section": "",
+    "text": "IPUMS Time Use, collection of time diary data\nAmerican Heritage Time Use Study Extract Builder\nFrom 1930 to 2018, harmonized for comparison over time\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary\n\n\nYEAR\nYear of the diary entry\nNumerical\n\n\nHHID\nHousehold type (1=married with child)\nCategorical\n\n\nUNDER18\nNumber of children under 18 in the household\nNumerical\n\n\nAGEYNGST\nAge of youngest child\nNumerical\n\n\nEDUC\nEducation (5=college graduate, 6=post college)\nCategorical\n\n\nAGE\nAge of participant\nNumerical\n\n\nACT_PAID\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nACT_CHCARE\nDaily time spent on child care\nNumerical\n\n\nACT_CIVIC\nDaily time spent on civic, voluntary, and religious activities\nNumerical\n\n\nACT_EDUCA\nDaily time spent on education\nNumerical\n\n\nACT_LEISURE\nDaily time spent on free time (leisure)\nNumerical\n\n\nACT_PCARE\nDaily time spent on personal care\nNumerical\n\n\nACT_TRAVEL\nDaily time spent on travel\nNumerical"
   }
 ]

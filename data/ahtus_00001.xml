@@ -1,0 +1,1841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook ID="ddi2-c8414590-9b41-013e-fb1b-02420a1c0304-ahtus_00001.dat-www.ahtusdata.org" version="2.5" xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an AHTUS Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'ahtus_00001.dat'</subTitl>
+        <IDNo>ddi2-c8414590-9b41-013e-fb1b-02420a1c0304-ahtus_00001.dat-www.ahtusdata.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2026-04-03">April 3, 2026</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract ahtus_00001.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2026-04-03">April 3, 2026</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="ahtus">IPUMS AHTUS</serName>
+        <serInfo>DOI:10.18128/D061.V1.2</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2026-04-03"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Technical Person Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Weights Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Core Demographic Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Geography Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Household characteristics Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Work Status Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Income Variables -- PERSON</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-18">
+        <timePrd date="1930" event="single">1930</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-1">
+        <timePrd date="1965" event="single">1965</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-2">
+        <timePrd date="1975" event="single">1975</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-3">
+        <timePrd date="1985" event="single">1985</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-4">
+        <timePrd date="1993" event="single">1993</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-5">
+        <timePrd date="1995" event="single">1995</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-6">
+        <timePrd date="1998" event="single">1998</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-7">
+        <timePrd date="2003" event="single">2003</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-8">
+        <timePrd date="2004" event="single">2004</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-9">
+        <timePrd date="2005" event="single">2005</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-10">
+        <timePrd date="2006" event="single">2006</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-11">
+        <timePrd date="2007" event="single">2007</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-12">
+        <timePrd date="2008" event="single">2008</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-13">
+        <timePrd date="2009" event="single">2009</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-14">
+        <timePrd date="2010" event="single">2010</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-15">
+        <timePrd date="2011" event="single">2011</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-16">
+        <timePrd date="2012" event="single">2012</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-19">
+        <timePrd date="2018" event="single">2018</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1930
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1965
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1975
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1985
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1993
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1995
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  1998
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2003 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2004 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2005 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2006 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2007 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2008 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2009 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2010 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2011 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2012 ATUS
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2018 ATUS
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="no"><![CDATA[None]]></confDec>
+        <contact URI="http://ahtusdata.org/" affiliation="IPUMS">AHTUS</contact>
+        <citReq><![CDATA[Publications and research reports based on the AHTUS database must cite it appropriately. The citation should include the following:
+
+Kimberly Fisher, Jonathan Gershuny, Sarah M. Flood, Joan Garcia Roman, and Sandra L. Hofferth. American Heritage Time Use Study Extract Builder: Version 1.2 [dataset]. Minneapolis, MN: IPUMS, 2018. https://doi.org/10.18128/D061.V1.2
+
+The licensing agreement for use of AHTUS data requires that users supply us with the title and full citation for any publications, research reports, or educational materials making use of the data or documentation. Please add your citation to the IPUMS bibliography: http://bibliography.ipums.org/]]></citReq>
+        <conditions><![CDATA[Users of AHTUS data must agree to abide by the conditions of use. A user's license is valid for one year and may be renewed.  Users must agree to the following conditions:
+
+(1) No fees may be charged for use or distribution of the data.  All persons are granted a limited license to use these data, but you may not charge a fee for the data if you distribute it to others.
+
+(2) Cite IPUMS appropriately.  For information on proper citation, refer to the citation requirement section of this DDI document.
+
+(3) Tell us about any work you do using the IPUMS.  Publications, research reports, or presentations making use of AHTUS should be added to our Bibliography. Continued funding for the IPUMS depends on our ability to show our sponsor agencies that researchers are using the data for productive purposes.
+
+(4) Use it for GOOD -- never for EVIL.]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  prelim presentation 4.7.2026]]></notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>ahtus_00001.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="rectangular"/>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr><var ID="SAMPLE" dcml="0" files="ExtractData" intrvl="discrete" name="SAMPLE">
+  <location EndPos="4" StartPos="1" width="4"/>
+  <labl>Sample</labl>
+  <txt><![CDATA[SAMPLE indicates the dataset to which the case belongs. Some surveys include data from more than one year (YEAR) and other datasets combine respondents from more than one survey (SURVEY).]]></txt>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="PERNUM" dcml="0" files="ExtractData" intrvl="contin" name="PERNUM">
+  <location EndPos="6" StartPos="5" width="2"/>
+  <labl>Person number</labl>
+  <txt><![CDATA[PERNUM is constructed to uniquely identify each person within a given household. It is available for all household members whether they were present in the household at the time of the survey. This is the only line number variable available for each person in every household.]]></txt>
+  <codInstr><![CDATA[This is a 2-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="IDENT" dcml="0" files="ExtractData" intrvl="contin" name="IDENT">
+  <location EndPos="15" StartPos="7" width="9"/>
+  <labl>Identifier</labl>
+  <txt><![CDATA[IDENT is an identifier to link person and activity records. It is unique within but not across surveys. Together IDENT and SAMPLE uniquely identify persons.]]></txt>
+  <codInstr><![CDATA[This is a 9-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="HHID" dcml="0" files="ExtractData" intrvl="contin" name="HHID">
+  <location EndPos="31" StartPos="16" width="16"/>
+  <labl>Household identifier</labl>
+  <txt><![CDATA[HHID reports the household identifier in the original data. 
+
+Note that in datasets that include more than one diary per person and/or more than one person per household, HHID is not unique. Use IDENT to identify uniquely cases within a dataset and to link persons and activities records in hierarchical files.]]></txt>
+  <codInstr><![CDATA[This is a 16-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="PID" dcml="0" files="ExtractData" intrvl="contin" name="PID">
+  <location EndPos="45" StartPos="32" width="14"/>
+  <labl>Person identifier</labl>
+  <txt><![CDATA[PID indicates the person identifier in the original dataset.
+
+Note that in datasets that include more than one diary per person and/or more than one person per household, PID is not unique. Use IDENT to identify uniquely cases and link persons and activities records in hierarchical files.]]></txt>
+  <codInstr><![CDATA[This is a 14-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="SERIAL" dcml="0" files="ExtractData" intrvl="contin" name="SERIAL">
+  <location EndPos="52" StartPos="46" width="7"/>
+  <labl>Person serial number</labl>
+  <txt><![CDATA[SERIAL is an identifying number unique to each person.]]></txt>
+  <codInstr><![CDATA[CodesSERIAL is a 7-digit numeric variable.]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="YEAR" dcml="0" files="ExtractData" intrvl="discrete" name="YEAR">
+  <location EndPos="56" StartPos="53" width="4"/>
+  <labl>Year diary kept</labl>
+  <txt><![CDATA[YEAR indicates the year the survey was completed. 
+
+Although in most surveys data were collected in the same year, others include diaries kept in different years. In 1965 and 1998 when diaries were combined from two different surveys (SURVEY) and collected in different years, YEAR and SAMPLE are not the same.
+
+Detailed information about each sample is available elsewhere.]]></txt>
+  <catgry>
+    <catValu>1930</catValu>
+    <labl>1930</labl>
+  </catgry>
+  <catgry>
+    <catValu>1931</catValu>
+    <labl>1931</labl>
+  </catgry>
+  <catgry>
+    <catValu>1965</catValu>
+    <labl>1965</labl>
+  </catgry>
+  <catgry>
+    <catValu>1966</catValu>
+    <labl>1966</labl>
+  </catgry>
+  <catgry>
+    <catValu>1975</catValu>
+    <labl>1975</labl>
+  </catgry>
+  <catgry>
+    <catValu>1976</catValu>
+    <labl>1976</labl>
+  </catgry>
+  <catgry>
+    <catValu>1985</catValu>
+    <labl>1985</labl>
+  </catgry>
+  <catgry>
+    <catValu>1992</catValu>
+    <labl>1992</labl>
+  </catgry>
+  <catgry>
+    <catValu>1993</catValu>
+    <labl>1993</labl>
+  </catgry>
+  <catgry>
+    <catValu>1994</catValu>
+    <labl>1994</labl>
+  </catgry>
+  <catgry>
+    <catValu>1995</catValu>
+    <labl>1995</labl>
+  </catgry>
+  <catgry>
+    <catValu>1998</catValu>
+    <labl>1998</labl>
+  </catgry>
+  <catgry>
+    <catValu>1999</catValu>
+    <labl>1999</labl>
+  </catgry>
+  <catgry>
+    <catValu>2000</catValu>
+    <labl>2000</labl>
+  </catgry>
+  <catgry>
+    <catValu>2003</catValu>
+    <labl>2003</labl>
+  </catgry>
+  <catgry>
+    <catValu>2004</catValu>
+    <labl>2004</labl>
+  </catgry>
+  <catgry>
+    <catValu>2005</catValu>
+    <labl>2005</labl>
+  </catgry>
+  <catgry>
+    <catValu>2006</catValu>
+    <labl>2006</labl>
+  </catgry>
+  <catgry>
+    <catValu>2007</catValu>
+    <labl>2007</labl>
+  </catgry>
+  <catgry>
+    <catValu>2008</catValu>
+    <labl>2008</labl>
+  </catgry>
+  <catgry>
+    <catValu>2009</catValu>
+    <labl>2009</labl>
+  </catgry>
+  <catgry>
+    <catValu>2010</catValu>
+    <labl>2010</labl>
+  </catgry>
+  <catgry>
+    <catValu>2011</catValu>
+    <labl>2011</labl>
+  </catgry>
+  <catgry>
+    <catValu>2012</catValu>
+    <labl>2012</labl>
+  </catgry>
+  <catgry>
+    <catValu>2018</catValu>
+    <labl>2018</labl>
+  </catgry>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="AGE" dcml="0" files="ExtractData" intrvl="discrete" name="AGE">
+  <location EndPos="58" StartPos="57" width="2"/>
+  <labl>Age</labl>
+  <txt><![CDATA[AGE reports the age of respondents.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>0</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>1</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>2</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>3</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>4</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>5</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>6</labl>
+  </catgry>
+  <catgry>
+    <catValu>07</catValu>
+    <labl>7</labl>
+  </catgry>
+  <catgry>
+    <catValu>08</catValu>
+    <labl>8</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>9</labl>
+  </catgry>
+  <catgry>
+    <catValu>10</catValu>
+    <labl>10</labl>
+  </catgry>
+  <catgry>
+    <catValu>11</catValu>
+    <labl>11</labl>
+  </catgry>
+  <catgry>
+    <catValu>12</catValu>
+    <labl>12</labl>
+  </catgry>
+  <catgry>
+    <catValu>13</catValu>
+    <labl>13</labl>
+  </catgry>
+  <catgry>
+    <catValu>14</catValu>
+    <labl>14</labl>
+  </catgry>
+  <catgry>
+    <catValu>15</catValu>
+    <labl>15</labl>
+  </catgry>
+  <catgry>
+    <catValu>16</catValu>
+    <labl>16</labl>
+  </catgry>
+  <catgry>
+    <catValu>17</catValu>
+    <labl>17</labl>
+  </catgry>
+  <catgry>
+    <catValu>18</catValu>
+    <labl>18</labl>
+  </catgry>
+  <catgry>
+    <catValu>19</catValu>
+    <labl>19</labl>
+  </catgry>
+  <catgry>
+    <catValu>20</catValu>
+    <labl>20</labl>
+  </catgry>
+  <catgry>
+    <catValu>21</catValu>
+    <labl>21</labl>
+  </catgry>
+  <catgry>
+    <catValu>22</catValu>
+    <labl>22</labl>
+  </catgry>
+  <catgry>
+    <catValu>23</catValu>
+    <labl>23</labl>
+  </catgry>
+  <catgry>
+    <catValu>24</catValu>
+    <labl>24</labl>
+  </catgry>
+  <catgry>
+    <catValu>25</catValu>
+    <labl>25</labl>
+  </catgry>
+  <catgry>
+    <catValu>26</catValu>
+    <labl>26</labl>
+  </catgry>
+  <catgry>
+    <catValu>27</catValu>
+    <labl>27</labl>
+  </catgry>
+  <catgry>
+    <catValu>28</catValu>
+    <labl>28</labl>
+  </catgry>
+  <catgry>
+    <catValu>29</catValu>
+    <labl>29</labl>
+  </catgry>
+  <catgry>
+    <catValu>30</catValu>
+    <labl>30</labl>
+  </catgry>
+  <catgry>
+    <catValu>31</catValu>
+    <labl>31</labl>
+  </catgry>
+  <catgry>
+    <catValu>32</catValu>
+    <labl>32</labl>
+  </catgry>
+  <catgry>
+    <catValu>33</catValu>
+    <labl>33</labl>
+  </catgry>
+  <catgry>
+    <catValu>34</catValu>
+    <labl>34</labl>
+  </catgry>
+  <catgry>
+    <catValu>35</catValu>
+    <labl>35</labl>
+  </catgry>
+  <catgry>
+    <catValu>36</catValu>
+    <labl>36</labl>
+  </catgry>
+  <catgry>
+    <catValu>37</catValu>
+    <labl>37</labl>
+  </catgry>
+  <catgry>
+    <catValu>38</catValu>
+    <labl>38</labl>
+  </catgry>
+  <catgry>
+    <catValu>39</catValu>
+    <labl>39</labl>
+  </catgry>
+  <catgry>
+    <catValu>40</catValu>
+    <labl>40</labl>
+  </catgry>
+  <catgry>
+    <catValu>41</catValu>
+    <labl>41</labl>
+  </catgry>
+  <catgry>
+    <catValu>42</catValu>
+    <labl>42</labl>
+  </catgry>
+  <catgry>
+    <catValu>43</catValu>
+    <labl>43</labl>
+  </catgry>
+  <catgry>
+    <catValu>44</catValu>
+    <labl>44</labl>
+  </catgry>
+  <catgry>
+    <catValu>45</catValu>
+    <labl>45</labl>
+  </catgry>
+  <catgry>
+    <catValu>46</catValu>
+    <labl>46</labl>
+  </catgry>
+  <catgry>
+    <catValu>47</catValu>
+    <labl>47</labl>
+  </catgry>
+  <catgry>
+    <catValu>48</catValu>
+    <labl>48</labl>
+  </catgry>
+  <catgry>
+    <catValu>49</catValu>
+    <labl>49</labl>
+  </catgry>
+  <catgry>
+    <catValu>50</catValu>
+    <labl>50</labl>
+  </catgry>
+  <catgry>
+    <catValu>51</catValu>
+    <labl>51</labl>
+  </catgry>
+  <catgry>
+    <catValu>52</catValu>
+    <labl>52</labl>
+  </catgry>
+  <catgry>
+    <catValu>53</catValu>
+    <labl>53</labl>
+  </catgry>
+  <catgry>
+    <catValu>54</catValu>
+    <labl>54</labl>
+  </catgry>
+  <catgry>
+    <catValu>55</catValu>
+    <labl>55</labl>
+  </catgry>
+  <catgry>
+    <catValu>56</catValu>
+    <labl>56</labl>
+  </catgry>
+  <catgry>
+    <catValu>57</catValu>
+    <labl>57</labl>
+  </catgry>
+  <catgry>
+    <catValu>58</catValu>
+    <labl>58</labl>
+  </catgry>
+  <catgry>
+    <catValu>59</catValu>
+    <labl>59</labl>
+  </catgry>
+  <catgry>
+    <catValu>60</catValu>
+    <labl>60</labl>
+  </catgry>
+  <catgry>
+    <catValu>61</catValu>
+    <labl>61</labl>
+  </catgry>
+  <catgry>
+    <catValu>62</catValu>
+    <labl>62</labl>
+  </catgry>
+  <catgry>
+    <catValu>63</catValu>
+    <labl>63</labl>
+  </catgry>
+  <catgry>
+    <catValu>64</catValu>
+    <labl>64</labl>
+  </catgry>
+  <catgry>
+    <catValu>65</catValu>
+    <labl>65</labl>
+  </catgry>
+  <catgry>
+    <catValu>66</catValu>
+    <labl>66</labl>
+  </catgry>
+  <catgry>
+    <catValu>67</catValu>
+    <labl>67</labl>
+  </catgry>
+  <catgry>
+    <catValu>68</catValu>
+    <labl>68</labl>
+  </catgry>
+  <catgry>
+    <catValu>69</catValu>
+    <labl>69</labl>
+  </catgry>
+  <catgry>
+    <catValu>70</catValu>
+    <labl>70</labl>
+  </catgry>
+  <catgry>
+    <catValu>71</catValu>
+    <labl>71</labl>
+  </catgry>
+  <catgry>
+    <catValu>72</catValu>
+    <labl>72</labl>
+  </catgry>
+  <catgry>
+    <catValu>73</catValu>
+    <labl>73</labl>
+  </catgry>
+  <catgry>
+    <catValu>74</catValu>
+    <labl>74</labl>
+  </catgry>
+  <catgry>
+    <catValu>75</catValu>
+    <labl>75</labl>
+  </catgry>
+  <catgry>
+    <catValu>76</catValu>
+    <labl>76</labl>
+  </catgry>
+  <catgry>
+    <catValu>77</catValu>
+    <labl>77</labl>
+  </catgry>
+  <catgry>
+    <catValu>78</catValu>
+    <labl>78</labl>
+  </catgry>
+  <catgry>
+    <catValu>79</catValu>
+    <labl>79</labl>
+  </catgry>
+  <catgry>
+    <catValu>80</catValu>
+    <labl>80</labl>
+  </catgry>
+  <catgry>
+    <catValu>81</catValu>
+    <labl>81</labl>
+  </catgry>
+  <catgry>
+    <catValu>82</catValu>
+    <labl>82</labl>
+  </catgry>
+  <catgry>
+    <catValu>83</catValu>
+    <labl>83</labl>
+  </catgry>
+  <catgry>
+    <catValu>84</catValu>
+    <labl>84</labl>
+  </catgry>
+  <catgry>
+    <catValu>85</catValu>
+    <labl>85</labl>
+  </catgry>
+  <catgry>
+    <catValu>86</catValu>
+    <labl>86</labl>
+  </catgry>
+  <catgry>
+    <catValu>87</catValu>
+    <labl>87</labl>
+  </catgry>
+  <catgry>
+    <catValu>88</catValu>
+    <labl>88</labl>
+  </catgry>
+  <catgry>
+    <catValu>89</catValu>
+    <labl>89</labl>
+  </catgry>
+  <catgry>
+    <catValu>90</catValu>
+    <labl>90</labl>
+  </catgry>
+  <catgry>
+    <catValu>91</catValu>
+    <labl>91</labl>
+  </catgry>
+  <catgry>
+    <catValu>92</catValu>
+    <labl>92</labl>
+  </catgry>
+  <catgry>
+    <catValu>93</catValu>
+    <labl>93</labl>
+  </catgry>
+  <catgry>
+    <catValu>94</catValu>
+    <labl>94</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="SEX" dcml="0" files="ExtractData" intrvl="discrete" name="SEX">
+  <location EndPos="60" StartPos="59" width="2"/>
+  <labl>Sex</labl>
+  <txt><![CDATA[SEX reports whether the respondent is male or female.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Male</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Female</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="CIVSTAT" dcml="0" files="ExtractData" intrvl="discrete" name="CIVSTAT">
+  <location EndPos="62" StartPos="61" width="2"/>
+  <labl>Marital status</labl>
+  <txt><![CDATA[CIVSTAT reports the marital status of the respondent. 
+
+Users should note that some cohabiting but not legally married couples report themselves as married. Users may refer to COHAB for more detailed information.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Married</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Separated, divorced</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>Widowed</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Never married</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="EDUC" dcml="0" files="ExtractData" intrvl="discrete" name="EDUC">
+  <location EndPos="64" StartPos="63" width="2"/>
+  <labl>Education</labl>
+  <txt><![CDATA[EDUC reports the highest educational level of the respondent.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>0 - 8th Grade</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>9 - 11th Grade</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>High School Graduate</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Some College</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>College Graduate</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>Post College</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="RECWGHT" dcml="0" files="ExtractData" intrvl="contin" name="RECWGHT">
+  <location EndPos="80" StartPos="65" width="16"/>
+  <labl>Recommended sample (day) weight removing low quality diaries and missing age or sex</labl>
+  <txt><![CDATA[RECWGHT is the recommended sample weight.
+
+This weight accounts for population/sample distribution by age group and sex, provides an even distribution of the days of the week (and corrects for the oversample of parents in the 1999-2001 element of the 1998-2001 combined survey) for good quality diaries.
+
+In RECWGHT, all cases with missing basic information or bad diaries are 0-weighted, and thus are excluded from analysis. Nonetheless, these bad diaries remain in the files so that users who may examine the low-quality cases. For more information about the weights, see the weights section in the AHTUS user guide. 
+
+Cases were retained where demographic information exits for a spouse who did not complete a diary to allow users to examine non-response, but these cases were zero-weighted.]]></txt>
+  <codInstr><![CDATA[CodesRECWGHT is a 16-digit numeric variable.]]></codInstr>
+  <concept vocab="IPUMS">Weights Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="ETHNIC" dcml="0" files="ExtractData" intrvl="discrete" name="ETHNIC">
+  <location EndPos="82" StartPos="81" width="2"/>
+  <labl>Ethnic group (detailed)</labl>
+  <txt><![CDATA[ETHNIC reports the detailed ethnic group of the respondent. Users who want a historically-compatible ethnicity variable should use ETHNIC2. In addition, users may also want to use HISP, which indicates Hispanic descent.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>White</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Black</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>Asian</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Some other race</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>Hispanic</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="AGEYNGST" dcml="0" files="ExtractData" intrvl="discrete" name="AGEYNGST">
+  <location EndPos="84" StartPos="83" width="2"/>
+  <labl>Age of youngest child</labl>
+  <txt><![CDATA[AGEYNGST reports the age of the respondent's youngest child, who may or may not be a household member. 
+
+More detailed information about the number of children under 18 years old in the household is available in UNDER18. Similarly, FAMSTAT summarizes the household composition of the respondents.]]></txt>
+  <catgry>
+    <catValu>-7</catValu>
+    <labl>Not applicable or refusal</labl>
+  </catgry>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>0</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>1</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>2</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>3</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>4</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>5</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>6</labl>
+  </catgry>
+  <catgry>
+    <catValu>07</catValu>
+    <labl>7</labl>
+  </catgry>
+  <catgry>
+    <catValu>08</catValu>
+    <labl>8</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>9</labl>
+  </catgry>
+  <catgry>
+    <catValu>10</catValu>
+    <labl>10</labl>
+  </catgry>
+  <catgry>
+    <catValu>11</catValu>
+    <labl>11</labl>
+  </catgry>
+  <catgry>
+    <catValu>12</catValu>
+    <labl>12</labl>
+  </catgry>
+  <catgry>
+    <catValu>13</catValu>
+    <labl>13</labl>
+  </catgry>
+  <catgry>
+    <catValu>14</catValu>
+    <labl>14</labl>
+  </catgry>
+  <catgry>
+    <catValu>15</catValu>
+    <labl>15</labl>
+  </catgry>
+  <catgry>
+    <catValu>16</catValu>
+    <labl>16</labl>
+  </catgry>
+  <catgry>
+    <catValu>17</catValu>
+    <labl>17</labl>
+  </catgry>
+  <catgry>
+    <catValu>18</catValu>
+    <labl>18</labl>
+  </catgry>
+  <catgry>
+    <catValu>19</catValu>
+    <labl>19</labl>
+  </catgry>
+  <catgry>
+    <catValu>20</catValu>
+    <labl>20</labl>
+  </catgry>
+  <catgry>
+    <catValu>21</catValu>
+    <labl>21</labl>
+  </catgry>
+  <catgry>
+    <catValu>22</catValu>
+    <labl>22</labl>
+  </catgry>
+  <catgry>
+    <catValu>23</catValu>
+    <labl>23</labl>
+  </catgry>
+  <catgry>
+    <catValu>24</catValu>
+    <labl>24</labl>
+  </catgry>
+  <catgry>
+    <catValu>25</catValu>
+    <labl>25</labl>
+  </catgry>
+  <catgry>
+    <catValu>26</catValu>
+    <labl>26</labl>
+  </catgry>
+  <catgry>
+    <catValu>27</catValu>
+    <labl>27</labl>
+  </catgry>
+  <catgry>
+    <catValu>28</catValu>
+    <labl>28</labl>
+  </catgry>
+  <catgry>
+    <catValu>29</catValu>
+    <labl>29</labl>
+  </catgry>
+  <catgry>
+    <catValu>30</catValu>
+    <labl>30</labl>
+  </catgry>
+  <catgry>
+    <catValu>31</catValu>
+    <labl>31</labl>
+  </catgry>
+  <catgry>
+    <catValu>32</catValu>
+    <labl>32</labl>
+  </catgry>
+  <catgry>
+    <catValu>33</catValu>
+    <labl>33</labl>
+  </catgry>
+  <catgry>
+    <catValu>34</catValu>
+    <labl>34</labl>
+  </catgry>
+  <catgry>
+    <catValu>35</catValu>
+    <labl>35</labl>
+  </catgry>
+  <catgry>
+    <catValu>36</catValu>
+    <labl>36</labl>
+  </catgry>
+  <catgry>
+    <catValu>37</catValu>
+    <labl>37</labl>
+  </catgry>
+  <catgry>
+    <catValu>38</catValu>
+    <labl>38</labl>
+  </catgry>
+  <catgry>
+    <catValu>39</catValu>
+    <labl>39</labl>
+  </catgry>
+  <catgry>
+    <catValu>40</catValu>
+    <labl>40</labl>
+  </catgry>
+  <catgry>
+    <catValu>41</catValu>
+    <labl>41</labl>
+  </catgry>
+  <catgry>
+    <catValu>42</catValu>
+    <labl>42</labl>
+  </catgry>
+  <catgry>
+    <catValu>43</catValu>
+    <labl>43</labl>
+  </catgry>
+  <catgry>
+    <catValu>44</catValu>
+    <labl>44</labl>
+  </catgry>
+  <catgry>
+    <catValu>45</catValu>
+    <labl>45</labl>
+  </catgry>
+  <catgry>
+    <catValu>46</catValu>
+    <labl>46</labl>
+  </catgry>
+  <catgry>
+    <catValu>47</catValu>
+    <labl>47</labl>
+  </catgry>
+  <catgry>
+    <catValu>48</catValu>
+    <labl>48</labl>
+  </catgry>
+  <catgry>
+    <catValu>49</catValu>
+    <labl>49</labl>
+  </catgry>
+  <catgry>
+    <catValu>50</catValu>
+    <labl>50</labl>
+  </catgry>
+  <catgry>
+    <catValu>51</catValu>
+    <labl>51</labl>
+  </catgry>
+  <catgry>
+    <catValu>52</catValu>
+    <labl>52</labl>
+  </catgry>
+  <catgry>
+    <catValu>53</catValu>
+    <labl>53</labl>
+  </catgry>
+  <catgry>
+    <catValu>54</catValu>
+    <labl>54</labl>
+  </catgry>
+  <catgry>
+    <catValu>55</catValu>
+    <labl>55</labl>
+  </catgry>
+  <catgry>
+    <catValu>56</catValu>
+    <labl>56</labl>
+  </catgry>
+  <catgry>
+    <catValu>57</catValu>
+    <labl>57</labl>
+  </catgry>
+  <catgry>
+    <catValu>58</catValu>
+    <labl>58</labl>
+  </catgry>
+  <catgry>
+    <catValu>59</catValu>
+    <labl>59</labl>
+  </catgry>
+  <catgry>
+    <catValu>60</catValu>
+    <labl>60</labl>
+  </catgry>
+  <catgry>
+    <catValu>61</catValu>
+    <labl>61</labl>
+  </catgry>
+  <catgry>
+    <catValu>62</catValu>
+    <labl>62</labl>
+  </catgry>
+  <catgry>
+    <catValu>63</catValu>
+    <labl>63</labl>
+  </catgry>
+  <catgry>
+    <catValu>64</catValu>
+    <labl>64</labl>
+  </catgry>
+  <catgry>
+    <catValu>65</catValu>
+    <labl>65</labl>
+  </catgry>
+  <catgry>
+    <catValu>66</catValu>
+    <labl>66</labl>
+  </catgry>
+  <catgry>
+    <catValu>67</catValu>
+    <labl>67</labl>
+  </catgry>
+  <catgry>
+    <catValu>68</catValu>
+    <labl>68</labl>
+  </catgry>
+  <catgry>
+    <catValu>69</catValu>
+    <labl>69</labl>
+  </catgry>
+  <catgry>
+    <catValu>70</catValu>
+    <labl>70</labl>
+  </catgry>
+  <catgry>
+    <catValu>71</catValu>
+    <labl>71</labl>
+  </catgry>
+  <catgry>
+    <catValu>72</catValu>
+    <labl>72</labl>
+  </catgry>
+  <catgry>
+    <catValu>73</catValu>
+    <labl>73</labl>
+  </catgry>
+  <catgry>
+    <catValu>74</catValu>
+    <labl>74</labl>
+  </catgry>
+  <catgry>
+    <catValu>75</catValu>
+    <labl>75</labl>
+  </catgry>
+  <catgry>
+    <catValu>76</catValu>
+    <labl>76</labl>
+  </catgry>
+  <catgry>
+    <catValu>77</catValu>
+    <labl>77</labl>
+  </catgry>
+  <catgry>
+    <catValu>78</catValu>
+    <labl>78</labl>
+  </catgry>
+  <catgry>
+    <catValu>80</catValu>
+    <labl>80</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="DISAB" dcml="0" files="ExtractData" intrvl="discrete" name="DISAB">
+  <location EndPos="86" StartPos="85" width="2"/>
+  <labl>Has disability</labl>
+  <txt><![CDATA[DISAB reports whether the respondent is disabled or has a long-term limiting health condition.]]></txt>
+  <catgry>
+    <catValu>-9</catValu>
+    <labl>Not available</labl>
+  </catgry>
+  <catgry>
+    <catValu>-3</catValu>
+    <labl>Routed out in the 1992-94 survey</labl>
+  </catgry>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>Not available</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="REGIONC" dcml="0" files="ExtractData" intrvl="discrete" name="REGIONC">
+  <location EndPos="88" StartPos="87" width="2"/>
+  <labl>Census region</labl>
+  <txt><![CDATA[REGIONC reports the respondent's region of residence according to the Census classification.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Northeast</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Midwest</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>South</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>West</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Geography Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="URBAN" dcml="0" files="ExtractData" intrvl="discrete" name="URBAN">
+  <location EndPos="90" StartPos="89" width="2"/>
+  <labl>Urbanicity</labl>
+  <txt><![CDATA[URBAN reports whether the respondent resides in an urban or rural area. 
+
+This variable was provided in the original dataset for the 1965-66, 1975-76 and the 1985 surveys.  For the 1992-1995 surveys, this variable was created using the zipcode of the respondent's home address. Please see documentation provided by Oxford's Centre for Time Use Research for more information. For the 2003+ survey years, URBAN is constructed using the 1990 definitions of Metropolitan status.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>Rural</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Urban</labl>
+  </catgry>
+  <concept vocab="IPUMS">Geography Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="HHTYPE" dcml="0" files="ExtractData" intrvl="discrete" name="HHTYPE">
+  <location EndPos="92" StartPos="91" width="2"/>
+  <labl>Household type</labl>
+  <txt><![CDATA[HHTYPE reports the household type. 
+
+Users may also refer to CIVSTAT for marital status of the respondents.]]></txt>
+  <catgry>
+    <catValu>-9</catValu>
+    <labl>Not available</labl>
+  </catgry>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Married with child</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Married, no child</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>Female HH with child</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Female HH no child</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>Male HH</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>Single male</labl>
+  </catgry>
+  <catgry>
+    <catValu>07</catValu>
+    <labl>Single female</labl>
+  </catgry>
+  <catgry>
+    <catValu>08</catValu>
+    <labl>Other</labl>
+  </catgry>
+  <catgry>
+    <catValu>99</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Household characteristics Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="NADULT" dcml="0" files="ExtractData" intrvl="discrete" name="NADULT">
+  <location EndPos="94" StartPos="93" width="2"/>
+  <labl>Number of adults in the household</labl>
+  <txt><![CDATA[NADULT reports the number of adults in the household.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>1</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>2</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>3</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>4</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>5</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>6</labl>
+  </catgry>
+  <catgry>
+    <catValu>07</catValu>
+    <labl>7</labl>
+  </catgry>
+  <catgry>
+    <catValu>08</catValu>
+    <labl>8</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>9</labl>
+  </catgry>
+  <catgry>
+    <catValu>10</catValu>
+    <labl>10</labl>
+  </catgry>
+  <catgry>
+    <catValu>11</catValu>
+    <labl>11 or more</labl>
+  </catgry>
+  <concept vocab="IPUMS">Household characteristics Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="UNDER5" dcml="0" files="ExtractData" intrvl="discrete" name="UNDER5">
+  <location EndPos="96" StartPos="95" width="2"/>
+  <labl>Number of children under 5 in the household</labl>
+  <txt><![CDATA[UNDER5 reports the number of children under 5 years old in the household. For the age of the respondent's youngest child see AGEYNGST.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>0</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>1</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>2</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>3</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>4</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>5</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>6</labl>
+  </catgry>
+  <concept vocab="IPUMS">Household characteristics Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="UNDER18" dcml="0" files="ExtractData" intrvl="discrete" name="UNDER18">
+  <location EndPos="98" StartPos="97" width="2"/>
+  <labl>Number of children under 18 in the household</labl>
+  <txt><![CDATA[UNDER18 reports the number of children under 18 years old in the household. UNDER5 indicates the number of children under 5 years old in the household. For the age of the respondent's youngest child see AGEYNGST.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>0</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>1</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>2</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>3</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>4</labl>
+  </catgry>
+  <catgry>
+    <catValu>05</catValu>
+    <labl>5</labl>
+  </catgry>
+  <catgry>
+    <catValu>06</catValu>
+    <labl>6</labl>
+  </catgry>
+  <catgry>
+    <catValu>07</catValu>
+    <labl>7</labl>
+  </catgry>
+  <catgry>
+    <catValu>08</catValu>
+    <labl>8</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>9</labl>
+  </catgry>
+  <catgry>
+    <catValu>10</catValu>
+    <labl>10</labl>
+  </catgry>
+  <catgry>
+    <catValu>11</catValu>
+    <labl>More than 10</labl>
+  </catgry>
+  <concept vocab="IPUMS">Household characteristics Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="EMPSTAT" dcml="0" files="ExtractData" intrvl="discrete" name="EMPSTAT">
+  <location EndPos="100" StartPos="99" width="2"/>
+  <labl>Employment status</labl>
+  <txt><![CDATA[EMPSTAT reports the employment status of the respondent. 
+
+Users may find other variables about employment useful: FULLTIME, PARTTIME, NOEMPLOY, and UNEMP.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Full-time</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Part-time</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>Not employed</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Working, hours unknown</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="EMPSP" dcml="0" files="ExtractData" intrvl="discrete" name="EMPSP">
+  <location EndPos="102" StartPos="101" width="2"/>
+  <labl>Employment status of spouse</labl>
+  <txt><![CDATA[EMPSP reports the employment status of the spouse or partner of the respondent.]]></txt>
+  <catgry>
+    <catValu>-7</catValu>
+    <labl>No spouse</labl>
+  </catgry>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Full-time</labl>
+  </catgry>
+  <catgry>
+    <catValu>02</catValu>
+    <labl>Part-time</labl>
+  </catgry>
+  <catgry>
+    <catValu>03</catValu>
+    <labl>Unknown hours</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Not working</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="WAGELM" dcml="0" files="ExtractData" intrvl="discrete" name="WAGELM">
+  <location EndPos="111" StartPos="103" width="9"/>
+  <labl>Employment income from last month</labl>
+  <txt><![CDATA[WAGELM reports the respondent's employment income from last month. 
+
+In 1975, the exact amount is reported. 
+
+In 1985, wage is calculated from the wage rate and weekly hours multiplied by 4.  
+
+In 2003, wages from last week multiplied by 4 is reported.
+Users interested in more detailed household income data may refer to INCOMEQT.]]></txt>
+  <catgry>
+    <catValu>-00000009</catValu>
+    <labl>Not available</labl>
+  </catgry>
+  <catgry>
+    <catValu>-00000008</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>-00000007</catValu>
+    <labl>Not applicable</labl>
+  </catgry>
+  <concept vocab="IPUMS">Income Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="WKHRS" dcml="0" files="ExtractData" intrvl="discrete" name="WKHRS">
+  <location EndPos="113" StartPos="112" width="2"/>
+  <labl>Number of hours worked per week</labl>
+  <txt><![CDATA[WKHRS reports the number of hours the respondent worked per week.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on the case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>-7</catValu>
+    <labl>Not applicable</labl>
+  </catgry>
+  <catgry>
+    <catValu>-3</catValu>
+    <labl>Routed out in the 1992-94 survey</labl>
+  </catgry>
+  <catgry>
+    <catValu>-4</catValu>
+    <labl>0 to 10 hours</labl>
+  </catgry>
+  <catgry>
+    <catValu>61</catValu>
+    <labl>Between 61-80 hours</labl>
+  </catgry>
+  <catgry>
+    <catValu>81</catValu>
+    <labl>More than 80 hours</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="NOEMPLOY" dcml="0" files="ExtractData" intrvl="discrete" name="NOEMPLOY">
+  <location EndPos="115" StartPos="114" width="2"/>
+  <labl>Employment status</labl>
+  <txt><![CDATA[NOEMPLOY reports whether the respondent is not employed. 
+
+Non-employment may be the result of retirement, being a student or homemaker status. It does not indicate unemployment but participation in the labor force. Users interested in more detailed non-employment status may refer to RETIRED, STUDENT, and HOMEMAKR]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="HOMEMAKR" dcml="0" files="ExtractData" intrvl="discrete" name="HOMEMAKR">
+  <location EndPos="117" StartPos="116" width="2"/>
+  <labl>Homemaker status</labl>
+  <txt><![CDATA[HOMEMAKR reports whether the respondent is a homemaker. 
+
+Homemakers are categorized as not employed. Users may refer to NOEMPLOY for more detailed information.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>-3</catValu>
+    <labl>Routed out 92-94</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="FULLTIME" dcml="0" files="ExtractData" intrvl="discrete" name="FULLTIME">
+  <location EndPos="119" StartPos="118" width="2"/>
+  <labl>Full-time employment</labl>
+  <txt><![CDATA[FULLTIME reports whether the respondent works full time. 
+
+Users who want greater detail about respondents' employment may refer to EMPSTAT. Users who want to know the number of full-time workers in the household may refer to NWORK. 
+
+Users who want detailed information about part-time work may refer to PARTTIME, which reports whether the respondent works part-time.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Working hours unknown</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="PARTTIME" dcml="0" files="ExtractData" intrvl="discrete" name="PARTTIME">
+  <location EndPos="121" StartPos="120" width="2"/>
+  <labl>Part-time employment</labl>
+  <txt><![CDATA[PARTTIME reports whether the respondent works part time. 
+
+Users who want greater detail about respondents' employment may refer to EMPSTAT.
+
+Users who want detailed information about full-time work may refer to FULLTIME, which reports whether the respondent works full time.]]></txt>
+  <catgry>
+    <catValu>-8</catValu>
+    <labl>Missing or dirty on case record</labl>
+  </catgry>
+  <catgry>
+    <catValu>00</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>01</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>04</catValu>
+    <labl>Working hours unknown</labl>
+  </catgry>
+  <catgry>
+    <catValu>09</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+  <var ID="ACT_CHCARE" dcml="0" files="ExtractData" intrvl="contin" name="ACT_CHCARE">
+    <location EndPos="125" StartPos="122" width="4"/>
+    <labl>ACT: Child care</labl>
+    <txt><![CDATA[ACT: Child care]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_CIVIC" dcml="0" files="ExtractData" intrvl="contin" name="ACT_CIVIC">
+    <location EndPos="129" StartPos="126" width="4"/>
+    <labl>ACT: Adult care, civic, voluntary, and religious activities</labl>
+    <txt><![CDATA[ACT: Adult care, civic, voluntary, and religious activities]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_EDUCA" dcml="0" files="ExtractData" intrvl="contin" name="ACT_EDUCA">
+    <location EndPos="133" StartPos="130" width="4"/>
+    <labl>ACT: Education</labl>
+    <txt><![CDATA[ACT: Education]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_INHOME" dcml="0" files="ExtractData" intrvl="contin" name="ACT_INHOME">
+    <location EndPos="137" StartPos="134" width="4"/>
+    <labl>ACT: In home free time leisure</labl>
+    <txt><![CDATA[ACT: In home free time leisure]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_MEDIA" dcml="0" files="ExtractData" intrvl="contin" name="ACT_MEDIA">
+    <location EndPos="141" StartPos="138" width="4"/>
+    <labl>ACT: Media and computing</labl>
+    <txt><![CDATA[ACT: Media and computing]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_MISSING" dcml="0" files="ExtractData" intrvl="contin" name="ACT_MISSING">
+    <location EndPos="145" StartPos="142" width="4"/>
+    <labl>ACT: Missing Activities</labl>
+    <txt><![CDATA[ACT: Missing Activities]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_OUTHOME" dcml="0" files="ExtractData" intrvl="contin" name="ACT_OUTHOME">
+    <location EndPos="149" StartPos="146" width="4"/>
+    <labl>ACT: Out of home free time and leisure</labl>
+    <txt><![CDATA[ACT: Out of home free time and leisure]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_PCARE" dcml="0" files="ExtractData" intrvl="contin" name="ACT_PCARE">
+    <location EndPos="153" StartPos="150" width="4"/>
+    <labl>ACT: Personal care</labl>
+    <txt><![CDATA[ACT: Personal care]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_PHYSICAL" dcml="0" files="ExtractData" intrvl="contin" name="ACT_PHYSICAL">
+    <location EndPos="157" StartPos="154" width="4"/>
+    <labl>ACT: Sports, exercise, and outdoor activities</labl>
+    <txt><![CDATA[ACT: Sports, exercise, and outdoor activities]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_TRAVEL" dcml="0" files="ExtractData" intrvl="contin" name="ACT_TRAVEL">
+    <location EndPos="161" StartPos="158" width="4"/>
+    <labl>ACT: Travel</labl>
+    <txt><![CDATA[ACT: Travel]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_UNDOM" dcml="0" files="ExtractData" intrvl="contin" name="ACT_UNDOM">
+    <location EndPos="165" StartPos="162" width="4"/>
+    <labl>ACT: Unpaid domestic work</labl>
+    <txt><![CDATA[ACT: Unpaid domestic work]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+  <var ID="ACT_WORK" dcml="0" files="ExtractData" intrvl="contin" name="ACT_WORK">
+    <location EndPos="169" StartPos="166" width="4"/>
+    <labl>ACT: Paid Work</labl>
+    <txt><![CDATA[ACT: Paid Work]]></txt>
+    <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+    <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+    <varFormat schema="other" type="numeric"/>
+  </var>
+</dataDscr>
+</codeBook>
