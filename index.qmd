@@ -1,5 +1,6 @@
 ---
 title: "MATH 244: Paid vs. Unpaid Labor by Sex"
+authors: "The West Coasters: Caitlin Gong, Meredith Hillier, & Leela Khatri"
 ---
 
 Welcome! This is a template for creating a website using quarto and GitHub pages.

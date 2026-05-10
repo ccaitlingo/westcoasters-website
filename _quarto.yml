@@ -3,12 +3,17 @@ project:
   output-dir: docs
 
 website:
-  title: "M244 Project"
+  title: "MATH 244: Paid vs. Unpaid Labor"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - notes.qmd
+      - href: introductiondata.qmd  
+        text: "Introduction & Data"
+      - href: methodology.qmd  
+        text: "Methodology"
+      - href: resultsdiscussion.qmd  
+        text: "Results & Discussion"
 
 format:
   html:

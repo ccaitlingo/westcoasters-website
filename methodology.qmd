@@ -1,5 +1,5 @@
 ---
-title: "Notes"
+title: "Methodology"
 subtitle: "Spring 2026"
 format: 
   html:

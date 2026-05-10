@@ -9,8 +9,36 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "MATH 244: Intermediate Data Science Project",
+    "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
     "section": "",
     "text": "Welcome! This is a template for creating a website using quarto and GitHub pages.\n\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "Introduction & Data.html",
+    "href": "Introduction & Data.html",
+    "title": "Introduction & Data",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "Methodology.html",
+    "href": "Methodology.html",
+    "title": "Introduction & Data",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "Discussion.html",
+    "href": "Discussion.html",
+    "title": "Introduction & Data",
+    "section": "",
+    "text": "Example of adding another page to a website."
+  },
+  {
+    "objectID": "Results.html",
+    "href": "Results.html",
+    "title": "Introduction & Data",
+    "section": "",
+    "text": "Example of adding another page to a website."
   }
 ]
