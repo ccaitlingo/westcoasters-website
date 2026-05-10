@@ -15,15 +15,34 @@ editor:
 ---
 
 ::::: columns
-::: {.column width="30%"}
-  * IPUMS Time Use, collection of time diary data
+::: {.column width="40%"}
+Dataset: IPUMS Time Use
+
+  * Collection of time diary data
   * American Heritage Time Use Study Extract Builder
   * From 1930 to 2018, harmonized for comparison over time
+  
+Filters:
+
+  * Day: M-F
+  * Household type: married with kids
+  * Kids under 18 in household
+  * Working-age individuals (25 through 54)
+  * College educated
+  * Filter out missing/dirty values (wage, sex, time use)
+  * Year: 2010s
+  
+Transformations:
+
+  * Convert categorical variables to factors
+  * Convert time use variables to hours per day
+  * Combine time spent on child care and domestic work into one "unpaid domestic work" variable
 :::
-::: {.column width="70%"}
+::: {.column width="60%"}
 ```{r codebook, echo=FALSE, warning=FALSE, message=FALSE}
 library(kableExtra)
 
+# define codebook
 codebook <- tibble::tribble(
   ~Variable, ~Description, ~Type,
   "WAGELM", "Monthly employment income", "Numerical",
@@ -34,7 +53,7 @@ codebook <- tibble::tribble(
   "AGEYNGST", "Age of youngest child", "Numerical",
   "EDUC", "Education (5=college graduate, 6=post college)", "Categorical",
   "AGE", "Age of participant", "Numerical",
-  "ACT_PAID", "Daily time spent on paid work", "Numerical",
+  "ACT_WORK", "Daily time spent on paid work", "Numerical",
   "ACT_UNPAID", "Daily time spent on unpaid domestic work", "Numerical",
   "ACT_CHCARE", "Daily time spent on child care", "Numerical",
   "ACT_CIVIC", "Daily time spent on civic, voluntary, and religious activities", "Numerical",
@@ -44,6 +63,7 @@ codebook <- tibble::tribble(
   "ACT_TRAVEL", "Daily time spent on travel", "Numerical"
 )
 
+# print codebook aesthetically
 codebook %>%
   kable(format = "html") %>%
   kable_styling(font_size = 18, full_width = FALSE, position = "center") %>%
@@ -52,3 +72,108 @@ codebook %>%
 ```
 :::
 :::::
+
+```{r load_packages, include=FALSE, warning=FALSE, message=FALSE}
+# R packages
+library(ipumsr)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reticulate)
+library(gt)
+```
+
+```{r load_data, include=FALSE, warning=FALSE, message=FALSE}
+# load in data
+ddi <- read_ipums_ddi("data/ahtus_00002.xml")
+data <- read_ipums_micro(ddi)
+```
+
+```{r filtering_vis1-4, include=FALSE}
+# initial filtering for EDA visuals 1-4
+filtered_data <- data %>%
+  filter(
+    HHTYPE == 1, # filter to married with kids
+                 # isolating a group where childcare is relevant
+                 # avoid comparing people who don’t face childcare constraints
+    UNDER18 > 0, # filter to individuals with kids under age of 18
+    AGE >= 22 & AGE <= 40, # between the ages of 22 and 40
+    EDUC %in% c(5, 6), # college educated
+    AGEYNGST >= 0 & AGEYNGST <= 18, # youngest child is between age 0 and 18
+    SEX %in% c(1, 2), # male or female
+    !is.na(AGE), 
+    !is.na(EDUC)
+  ) %>%
+  mutate(
+    sex_label = ifelse(SEX == 1, "Male", "Female"),
+    ACT_UNPAID = ACT_CHCARE + ACT_UNDOM
+  )
+```
+
+
+```{r filtering_vis5_reg, include=FALSE}
+
+# filtering and turning sex and full-time into binary variables
+datareg <- filtered_data %>%
+  
+  filter(
+    (EDUC == 5 | EDUC == 6), # filter to just college educated individuals
+    # FULLTIME == 1, # filter to just full-time workers
+    WAGELM > 0, # remove non-earners
+    ACT_CHCARE >= 0, # filter out missing or unclean data
+    ACT_PCARE >= 0 # filter out missing or unclean data
+  ) %>% 
+  
+  mutate(
+    across(starts_with("ACT_"), ~ .x / 60), # convert all time use vars to hours
+    female = ifelse(SEX == 2, 1, 0),
+    female = factor(female),
+    FULLTIME = factor(FULLTIME), 
+    log_wage = log(WAGELM + 1) # add column for log wage in case it becomes interesting
+  )
+  
+  
+# filter to just 2010s data
+data2010s <- datareg %>% 
+  filter(SAMPLE > 2009)
+
+```
+
+```{r new_filtering, include=FALSE}
+
+# Trying to omit some selection bias with our original filtering because the penalty to motherhood and marriage premium seems to disappear: keeping the age constraint, 
+# filtering and turning sex and full-time into binary variables
+
+filtered2 <- data %>%
+  filter(
+    DIARYDAY %in% 2:6, # filter to M-F responses
+    HHTYPE == 1, # filter to married with kids
+                 # isolating a group where childcare is relevant
+                 # avoid comparing people who don’t face childcare constraints
+    UNDER18 > 0, # filter to individuals with kids under age of 18
+    AGE >= 25 & AGE <= 54, # between the ages of 25 and 54
+    EDUC %in% c(5, 6), # college educated
+    AGEYNGST >= 0 & AGEYNGST <= 18, # youngest child is between age 0 and 18
+    SEX %in% c(1, 2), # male or female
+    WAGELM > 0 | WAGELM == 0,
+    ACT_CHCARE >= 0, # filter out missing or unclean data
+    ACT_PCARE >= 0, # filter out missing or unclean data
+    !is.na(AGE), 
+    !is.na(EDUC)
+  ) %>%
+  mutate(
+    sex_label = ifelse(SEX == 1, "Male", "Female"),
+    across(starts_with("ACT_"), ~ .x / 60), # convert all time use vars to hours
+    female = ifelse(SEX == 2, 1, 0),
+    female = factor(female),
+    FULLTIME = factor(FULLTIME), 
+    log_wage = log(WAGELM + 1), # add column for log wage in case it becomes interesting
+    ACT_UNPAID = ACT_CHCARE + ACT_UNDOM
+  ) 
+
+  
+# filter to just 2010s data
+data2010s2 <- filtered2 %>% 
+  filter(SAMPLE > 2009)
+
+```

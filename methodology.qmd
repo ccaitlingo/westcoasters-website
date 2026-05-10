@@ -14,4 +14,47 @@ editor:
     wrap: 72
 ---
 
-Example of adding another page to a website.
+## Regressions
+
+To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex.
+
+$$
+\text{ACT\_WORK} =
+\beta_0 +
+\beta_1 \cdot \text{ACT\_UNPAID} + 
+\beta_2 \cdot \text{SEX} +
+\beta_3 \cdot \text{ACT\_UNPAID} \times \text{SEX} +
+\delta \cdot C_i
+$$
+
+$$
+\text{WAGELM} =
+\beta_0 +
+\beta_1 \cdot \text{ACT\_UNPAID} + 
+\beta_2 \cdot \text{SEX} +
+\beta_3 \cdot \text{ACT\_UNPAID} \times \text{SEX} +
+\delta \cdot C_i
+$$
+
+In these regressions, $C_i$ represents our control variables: individuals' full-time employment status and employment status of partner. The interaction term coefficient $\beta_3$ represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.
+
+### Final Codebook
+
+```{r codebook2, echo=FALSE, warning=FALSE, message=FALSE}
+library(kableExtra)
+
+codebook2 <- tibble::tribble(
+  ~Variable, ~Description, ~Type,
+  "WAGELM", "Monthly employment income", "Numerical",
+  "ACT_WORK", "Daily time spent on paid work", "Numerical",
+  "ACT_UNPAID", "Daily time spent on unpaid domestic work", "Numerical",
+  "SEX", "Individual's sex (female=1, male=0)", "Binary"
+)
+
+codebook2 %>%
+  kable(format = "html") %>%
+  kable_styling(font_size = 18, full_width = FALSE, position = "center") %>%
+  column_spec(1, width = "8em") %>%
+  column_spec(2, width = "25em")
+
+```
