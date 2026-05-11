@@ -16,30 +16,332 @@ editor:
 
 ## Results
 
+```{r load_packages, include=FALSE, warning=FALSE, message=FALSE}
+# R packages
+library(ipumsr)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reticulate)
+library(gt)
+```
+
+```{r load_data, include=FALSE, warning=FALSE, message=FALSE}
+# load in data
+ddi <- read_ipums_ddi("data/ahtus_00002.xml")
+data <- read_ipums_micro(ddi)
+```
+
+```{r filtering_vis1-4, include=FALSE}
+# initial filtering for EDA visuals 1-4
+filtered_data <- data %>%
+  filter(
+    HHTYPE == 1, # filter to married with kids
+                 # isolating a group where childcare is relevant
+                 # avoid comparing people who don’t face childcare constraints
+    UNDER18 > 0, # filter to individuals with kids under age of 18
+    AGE >= 22 & AGE <= 40, # between the ages of 22 and 40
+    EDUC %in% c(5, 6), # college educated
+    AGEYNGST >= 0 & AGEYNGST <= 18, # youngest child is between age 0 and 18
+    SEX %in% c(1, 2), # male or female
+    !is.na(AGE), 
+    !is.na(EDUC)
+  ) %>%
+  mutate(
+    sex_label = ifelse(SEX == 1, "Male", "Female"),
+    ACT_UNPAID = ACT_CHCARE + ACT_UNDOM
+  )
+```
+
+```{r filtering_vis5_reg, include=FALSE}
+
+# filtering and turning sex and full-time into binary variables
+datareg <- filtered_data %>%
+  
+  filter(
+    (EDUC == 5 | EDUC == 6), # filter to just college educated individuals
+    # FULLTIME == 1, # filter to just full-time workers
+    WAGELM > 0, # remove non-earners
+    ACT_CHCARE >= 0, # filter out missing or unclean data
+    ACT_PCARE >= 0 # filter out missing or unclean data
+  ) %>% 
+  
+  mutate(
+    across(starts_with("ACT_"), ~ .x / 60), # convert all time use vars to hours
+    female = ifelse(SEX == 2, 1, 0),
+    female = factor(female),
+    FULLTIME = factor(FULLTIME), 
+    log_wage = log(WAGELM + 1) # add column for log wage in case it becomes interesting
+  )
+  
+  
+# filter to just 2010s data
+data2010s <- datareg %>% 
+  filter(SAMPLE > 2009)
+
+```
+
+```{r new_filtering, include=FALSE}
+
+# Trying to omit some selection bias with our original filtering because the penalty to motherhood and marriage premium seems to disappear: keeping the age constraint, 
+# filtering and turning sex and full-time into binary variables
+
+filtered2 <- data %>%
+  filter(
+    DIARYDAY %in% 2:6, # filter to M-F responses
+    HHTYPE == 1, # filter to married with kids
+                 # isolating a group where childcare is relevant
+                 # avoid comparing people who don’t face childcare constraints
+    UNDER18 > 0, # filter to individuals with kids under age of 18
+    AGE >= 25 & AGE <= 54, # between the ages of 25 and 54
+    EDUC %in% c(5, 6), # college educated
+    AGEYNGST >= 0 & AGEYNGST <= 18, # youngest child is between age 0 and 18
+    SEX %in% c(1, 2), # male or female
+    WAGELM > 0 | WAGELM == 0,
+    ACT_CHCARE >= 0, # filter out missing or unclean data
+    ACT_PCARE >= 0, # filter out missing or unclean data
+    !is.na(AGE), 
+    !is.na(EDUC)
+  ) %>%
+  mutate(
+    sex_label = ifelse(SEX == 1, "Male", "Female"),
+    across(starts_with("ACT_"), ~ .x / 60), # convert all time use vars to hours
+    female = ifelse(SEX == 2, 1, 0),
+    female = factor(female),
+    FULLTIME = factor(FULLTIME), 
+    log_wage = log(WAGELM + 1), # add column for log wage in case it becomes interesting
+    ACT_UNPAID = ACT_CHCARE + ACT_UNDOM
+  ) 
+
+  
+# filter to just 2010s data
+data2010s2 <- filtered2 %>% 
+  filter(SAMPLE > 2009)
+
+```
+
+### Regression 1: Paid vs. Unpaid Work
+
+*Motivation*
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+# time spent on paid work by gender
+
+
+
+# filter to full time workers
+
+data2010s2FT <- data2010s2 %>%
+  filter(FULLTIME == 1)
+
+
+
+data_long <- data2010s2FT %>%
+
+  pivot_longer(
+
+    cols = c(ACT_WORK, ACT_UNPAID),
+
+    names_to = "work_type",
+
+    values_to = "hours"
+
+  ) %>%
+
+  mutate(
+
+    work_type = recode(work_type,
+
+                       "ACT_WORK" = "Paid Work",
+
+                       "ACT_UNPAID" = "Unpaid Domestic Work"),
+
+    female = factor(female, labels = c("Men", "Women"))
+
+  )
+
+
+
+ggplot(data_long, aes(x = work_type, y = hours, fill = female)) +
+
+  geom_boxplot(position = position_dodge(width = 0.8)) +
+
+  labs(
+
+    title = "Time Spent on Paid vs. Unpaid Work by Gender",
+
+    subtitle = "Initial look at gender differences in working time for full-time workers",
+
+    x = "Time Spent on Work",
+
+    y = "Hours",
+
+    fill = "Gender"
+
+  ) +
+
+  theme_minimal()
+
+
+
+# INTERPRETATION
+
+# Median paid work quite similar
+
+# Median unpaid work for women higher than 3rd quartile for men
+
+```
+
+Women who work full-time spend a similar amount of time on paid work but
+more time on unpaid domestic work.
+
+*Results*
+
+::::: columns
+::: {.column width="50%"}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(stargazer)
+
+# the time tradeoff between increased unpaid work to paid work, by gender
+
+linreg2 <- lm(ACT_WORK ~ ACT_UNPAID*female + EMPSP + FULLTIME, data2010s2)
+
+stargazer(linreg2, type="text", omit.stat = c("rsq", "ser", "f", "adj.rsq", "n"), omit = c("EMPSP", "FULLTIME"))
+
+```
+:::
+
+::: {.column width="50%"}
+-   When controlling for $\,C_i\,$ and time spent on unpaid domestic
+    work, there is no statistically significant difference between males
+    and females' time spent at paid work.
+
+-   When controlling for $\,C_i\,$, each additional hour spent on unpaid
+    domestic work is associated with spending
+
+    -   0.92 fewer hours on paid work for males, and
+
+    -   0.79 fewer hours on paid work for females.
+:::
+:::::
+
+**Takeaway**: There is evidence of societal expectations that women
+continue handling domestic work despite similar paid work obligations.
+
+### Regression 2: Wage vs. Unpaid Work
+
+*Motivation*
+
+```{r, echo=FALSE}
+
+ggplot(data2010s2FT, aes(x = factor(female, labels = c("Men", "Women")),
+
+                        y = WAGELM, fill = factor(female))) +
+
+  geom_boxplot() +
+
+  labs(
+
+    title = "Wage Distribution by Gender",
+
+    subtitle = "Initial look at gender differences in wages for full-time workers",
+
+    x = "",
+
+    y = "Monthly Wage",
+
+    fill = "Gender"
+
+  ) +
+
+  theme_minimal() +
+
+  theme(legend.position = "none")
+
+```
+
+Women on average earn less per month than men, but still need to
+consider controlling for other variables.
+
+*Results*
+
+::::: columns
+::: {.column width="50%"}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+linreg5 <- lm(WAGELM ~ ACT_UNPAID * female + EMPSP + FULLTIME, data2010s2)
+
+stargazer(linreg5, type="text", omit.stat = c("rsq", "ser", "f", "adj.rsq", "n"), omit = c("EMPSP", "FULLTIME"))
+
+```
+:::
+
+::: {.column width="50%"}
+-   When controlling for $\,C_i\,$ and time spent on unpaid domestic
+    work, females on average earn \$1,517.20 less per month than males.
+
+-   When controlling for $\,C_i\,$, each additional hour spent on unpaid
+    domestic work is associated with earning
+
+    -   \$149 less per month for males, and
+
+    -   \$20 less per month for females.
+:::
+:::::
+
+<br>
+
+**Takeaway**: Same societal expectations are showing, where time spent
+on unpaid domestic work has a larger negative effect on male earnings
+than female earnings.
 
 ## Discussion
 
-The empirical results confirm our hypothesis that the time trade-off differs by gender. For women, the results indicate a double-burden. Women must balance both spheres of paid and domestic work.
+The empirical results confirm our hypothesis that the time trade-off
+differs by gender. For women, the results indicate a double-burden.
+Women must balance both spheres of paid and domestic work.
 
-For men, each additional hour of unpaid work results in near displacement of paid work ($0.92$ hours). In contrast, women only lose ($0.79$ hours) of paid work for every hour of domestic labor. Women are more likely to squeeze domestic tasks into their existing schedules, without retreating from the labor market. Thus, the results corroborate that women face a higher total labor burden. 
+For men, each additional hour of unpaid work results in near
+displacement of paid work ($0.92$ hours). In contrast, women only lose
+($0.79$ hours) of paid work for every hour of domestic labor. Women are
+more likely to squeeze domestic tasks into their existing schedules,
+without retreating from the labor market. Thus, the results corroborate
+that women face a higher total labor burden.
 
-For men, domestic work significantly disrupts earnings ($-\$149$ per hour). For women, the wage impact is less severe ($-\$20$ per hour). This may suggest that men's wages are tied to roles demanding overtime or undivided focus, so domestic work penalizes earning potential. Women may self-select into roles that better align with their domestic responsibilities. Their wages are lower to begin with, reflecting domestic trade-offs. So, additional domestic work has a negligible impact on their earnings.
+For men, domestic work significantly disrupts earnings ($-\$149$ per
+hour). For women, the wage impact is less severe ($-\$20$ per hour).
+This may suggest that men's wages are tied to roles demanding overtime
+or undivided focus, so domestic work penalizes earning potential. Women
+may self-select into roles that better align with their domestic
+responsibilities. Their wages are lower to begin with, reflecting
+domestic trade-offs. So, additional domestic work has a negligible
+impact on their earnings.
 
-In both models, gender significantly modifies the relationship between domestic work and economic outcomes. The steeper slopes for men indicate their labor force participation is more sensitive to domestic work. Conversely, women's labor force participation is far less reactive. Women are expected to work the same amount or more, while earning less on average. 
-
+In both models, gender significantly modifies the relationship between
+domestic work and economic outcomes. The steeper slopes for men indicate
+their labor force participation is more sensitive to domestic work.
+Conversely, women's labor force participation is far less reactive.
+Women are expected to work the same amount or more, while earning less
+on average.
 
 ## Limitations
 
-  * Diary data is messy and inconsistent for early time periods (pre-2010s).  
-  * We recognize the existence of potential selection bias within our sample. Are our filters too strict or not        strict enough?
-    +   Household type is constrained to married couples with kids.
-    +   Both spouses are college educated.
-  * Limited to male/female binary and heterosexual relationships
+-   Diary data is messy and inconsistent for early time periods
+    (pre-2010s).\
+-   We recognize the existence of potential selection bias within our
+    sample. Are our filters too strict or not strict enough?
+    -   Household type is constrained to married couples with kids.
+    -   Both spouses are college educated.
+-   Limited to male/female binary and heterosexual relationships
 
 ## Extensions for Future Work
 
-  * Include different demographic variables in regressions as explanatory variables:
-    + Race, Education-Level, Religion, etc.
-  * Include alternative time use variables as outcomes:
-    + Exercise, Leisure, Personal Care, etc.
-  * Time series exploration to examine how these relationships have shifted over time
+-   Include different demographic variables in regressions as
+    explanatory variables:
+    -   Race, Education-Level, Religion, etc.
+-   Include alternative time use variables as outcomes:
+    -   Exercise, Leisure, Personal Care, etc.
+-   Time series exploration to examine how these relationships have
+    shifted over time
