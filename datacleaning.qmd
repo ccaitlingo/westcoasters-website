@@ -193,7 +193,7 @@ still remains: even our most current data from 2018 shows that males on
 average spend 3.10 hours on unpaid domestic work, while females spend
 5.26 hours.
 
-```{r Figure1, echo=FALSE}
+```{r Figure1, echo=FALSE, warning=FALSE}
 # Unpaid Domestic Work by Sex (1930-2018)
 
 # Average hours by year and sex
