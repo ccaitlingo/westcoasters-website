@@ -4,14 +4,14 @@
     "href": "methodology.html",
     "title": "Methodology",
     "section": "",
-    "text": "To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex.\n\\[\n\\text{ACT\\_WORK} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\n\\[\n\\text{WAGELM} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\nIn these regressions, \\(C_i\\) represents our control variables: individuals’ full-time employment status and employment status of partner. The interaction term coefficient \\(\\beta_3\\) represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nACT_WORK\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary"
+    "text": "To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex. The two economic outcome variables of interest are time spent on paid work and wages.\n\\[\n\\text{ACT\\_WORK} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\n\\[\n\\text{WAGELM} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\nIn these regressions, \\(C_i\\) represents our control variables: individuals’ full-time employment status and employment status of partner. The interaction term coefficient \\(\\beta_3\\) represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nACT_WORK\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary"
   },
   {
     "objectID": "methodology.html#regressions",
     "href": "methodology.html#regressions",
     "title": "Methodology",
     "section": "",
-    "text": "To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex.\n\\[\n\\text{ACT\\_WORK} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\n\\[\n\\text{WAGELM} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\nIn these regressions, \\(C_i\\) represents our control variables: individuals’ full-time employment status and employment status of partner. The interaction term coefficient \\(\\beta_3\\) represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nACT_WORK\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary"
+    "text": "To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex. The two economic outcome variables of interest are time spent on paid work and wages.\n\\[\n\\text{ACT\\_WORK} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\n\\[\n\\text{WAGELM} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\nIn these regressions, \\(C_i\\) represents our control variables: individuals’ full-time employment status and employment status of partner. The interaction term coefficient \\(\\beta_3\\) represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nACT_WORK\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary"
   },
   {
     "objectID": "index.html",
@@ -33,13 +33,6 @@
     "title": "MATH 244: Paid vs. Unpaid Labor by Sex",
     "section": "Research Question",
     "text": "Research Question\nHow does time spent doing unpaid domestic work influence wages and time spent doing paid work? Does this relationship differ by sex?"
-  },
-  {
-    "objectID": "Discussion.html",
-    "href": "Discussion.html",
-    "title": "Introduction & Data",
-    "section": "",
-    "text": "Example of adding another page to a website."
   },
   {
     "objectID": "datacleaning.html",
