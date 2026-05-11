@@ -14,4 +14,32 @@ editor:
     wrap: 72
 ---
 
-Example of adding another page to a website.
+## Results
+
+
+## Discussion
+
+The empirical results confirm our hypothesis that the time trade-off differs by gender. For women, the results indicate a double-burden. Women must balance both spheres of paid and domestic work.
+
+For men, each additional hour of unpaid work results in near displacement of paid work ($0.92$ hours). In contrast, women only lose ($0.79$ hours) of paid work for every hour of domestic labor. Women are more likely to squeeze domestic tasks into their existing schedules, without retreating from the labor market. Thus, the results corroborate that women face a higher total labor burden. 
+
+For men, domestic work significantly disrupts earnings ($-\$149$ per hour). For women, the wage impact is less severe ($-\$20$ per hour). This may suggest that men's wages are tied to roles demanding overtime or undivided focus, so domestic work penalizes earning potential. Women may self-select into roles that better align with their domestic responsibilities. Their wages are lower to begin with, reflecting domestic trade-offs. So, additional domestic work has a negligible impact on their earnings.
+
+In both models, gender significantly modifies the relationship between domestic work and economic outcomes. The steeper slopes for men indicate their labor force participation is more sensitive to domestic work. Conversely, women's labor force participation is far less reactive. Women are expected to work the same amount or more, while earning less on average. 
+
+
+## Limitations
+
+  * Diary data is messy and inconsistent for early time periods (pre-2010s).  
+  * We recognize the existence of potential selection bias within our sample. Are our filters too strict or not        strict enough?
+    +   Household type is constrained to married couples with kids.
+    +   Both spouses are college educated.
+  * Limited to male/female binary and heterosexual relationships
+
+## Extensions for Future Work
+
+  * Include different demographic variables in regressions as explanatory variables:
+    + Race, Education-Level, Religion, etc.
+  * Include alternative time use variables as outcomes:
+    + Exercise, Leisure, Personal Care, etc.
+  * Time series exploration to examine how these relationships have shifted over time
