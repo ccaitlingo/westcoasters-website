@@ -204,7 +204,7 @@ summary_data <- filtered_data %>%
 
 # Line plot
 ggplot(summary_data, aes(x = YEAR, y = avg_unpaid_hours, color = sex_label)) +
-  geom_line(size = 1) +
+  geom_line(linewidth = 1) +
   geom_point() +
   labs(
     title = "Unpaid Domestic Work by Sex (1975 - 2018)",
