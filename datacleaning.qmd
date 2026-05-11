@@ -193,7 +193,7 @@ still remains: even our most current data from 2018 shows that males on
 average spend 3.10 hours on unpaid domestic work, while females spend
 5.26 hours.
 
-```{r Figure1, echo=FALSE, warning=FALSE}
+```{r Figure1, echo=FALSE, warning=FALSE, message=FALSE}
 # Unpaid Domestic Work by Sex (1930-2018)
 
 # Average hours by year and sex
@@ -220,7 +220,7 @@ ggplot(summary_data, aes(x = YEAR, y = avg_unpaid_hours, color = sex_label)) +
 ### Average Daily Time Use by Sex
 
 This visualization breaks down the 24 hours in a day into the proportion
-of time spent on various activities, averaged across the 2010s.
+of time spent on various activities, averaged across the 2010s. We see that on average, men spend more time on paid work than unpaid domestic work while women spend less time on paid work and more time on unpaid domestic work.
 
 ```{r Figure2, echo=FALSE, message=FALSE, warning=FALSE}
 # How time is split by gender on an average day!
