@@ -89,5 +89,26 @@
     "title": "Methodology",
     "section": "",
     "text": "To evaluate how time spent doing unpaid domestic work influences wages and time spent doing paid work, we ran two multiple linear regression models with interaction terms to investigate how this relationship differs by sex.\n\\[\n\\text{ACT\\_WORK} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\n\\[\n\\text{WAGELM} =\n\\beta_0 +\n\\beta_1 \\cdot \\text{ACT\\_UNPAID} +\n\\beta_2 \\cdot \\text{SEX} +\n\\beta_3 \\cdot \\text{ACT\\_UNPAID} \\times \\text{SEX} +\n\\delta \\cdot C_i\n\\]\nIn these regressions, \\(C_i\\) represents our control variables: individuals’ full-time employment status and employment status of partner. The interaction term coefficient \\(\\beta_3\\) represents how the relationship between time spent on unpaid domestic work and the outcome variable varies by sex.\n\n\n\n\n\n\n\nVariable\nDescription\nType\n\n\n\n\nWAGELM\nMonthly employment income\nNumerical\n\n\nACT_WORK\nDaily time spent on paid work\nNumerical\n\n\nACT_UNPAID\nDaily time spent on unpaid domestic work\nNumerical\n\n\nSEX\nIndividual's sex (female=1, male=0)\nBinary"
+  },
+  {
+    "objectID": "resultsdiscussion.html#discussion",
+    "href": "resultsdiscussion.html#discussion",
+    "title": "Results & Discussion",
+    "section": "Discussion",
+    "text": "Discussion\nThe empirical results confirm our hypothesis that the time trade-off differs by gender. For women, the results indicate a double-burden. Women must balance both spheres of paid and domestic work.\nFor men, each additional hour of unpaid work results in near displacement of paid work (\\(0.92\\) hours). In contrast, women only lose (\\(0.79\\) hours) of paid work for every hour of domestic labor. Women are more likely to squeeze domestic tasks into their existing schedules, without retreating from the labor market. Thus, the results corroborate that women face a higher total labor burden.\nFor men, domestic work significantly disrupts earnings (\\(-\\$149\\) per hour). For women, the wage impact is less severe (\\(-\\$20\\) per hour). This may suggest that men’s wages are tied to roles demanding overtime or undivided focus, so domestic work penalizes earning potential. Women may self-select into roles that better align with their domestic responsibilities. Their wages are lower to begin with, reflecting domestic trade-offs. So, additional domestic work has a negligible impact on their earnings.\nIn both models, gender significantly modifies the relationship between domestic work and economic outcomes. The steeper slopes for men indicate their labor force participation is more sensitive to domestic work. Conversely, women’s labor force participation is far less reactive. Women are expected to work the same amount or more, while earning less on average."
+  },
+  {
+    "objectID": "resultsdiscussion.html#limitations",
+    "href": "resultsdiscussion.html#limitations",
+    "title": "Results & Discussion",
+    "section": "Limitations",
+    "text": "Limitations\n\nDiary data is messy and inconsistent for early time periods (pre-2010s).\n\nWe recognize the existence of potential selection bias within our sample. Are our filters too strict or not strict enough?\n\nHousehold type is constrained to married couples with kids.\nBoth spouses are college educated.\n\nLimited to male/female binary and heterosexual relationships"
+  },
+  {
+    "objectID": "resultsdiscussion.html#extensions-for-future-work",
+    "href": "resultsdiscussion.html#extensions-for-future-work",
+    "title": "Results & Discussion",
+    "section": "Extensions for Future Work",
+    "text": "Extensions for Future Work\n\nInclude different demographic variables in regressions as explanatory variables:\n\nRace, Education-Level, Religion, etc.\n\nInclude alternative time use variables as outcomes:\n\nExercise, Leisure, Personal Care, etc.\n\nTime series exploration to examine how these relationships have shifted over time"
   }
 ]
